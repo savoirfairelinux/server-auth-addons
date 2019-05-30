@@ -17,7 +17,7 @@ LDAP groups assignment
     :target: https://runbot.odoo-community.org/runbot/251/11.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5| 
+|badge1| |badge2| |badge5| 
 
 .. image:: https://img.shields.io/badge/license-AGPL--3-blue.png
    :target: https://www.gnu.org/licenses/agpl
@@ -71,7 +71,7 @@ Contributors
 * Holger Brunn <hbrunn@therp.nl>
 * Giacomo Spettoli <giacomo.spettoli@gmail.com>
 * Alexey Pelykh <alexey.pelykh@brainbeanapps.com>
-* Luis gGrcia <luis.garcia@savoirfairelinux.com>
+* Luis Garcia <luis.garcia@savoirfairelinux.com>
 
 Maintainers
 ~~~~~~~~~~~
