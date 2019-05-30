@@ -28,14 +28,13 @@ class ResCompanyLdap(models.Model):
     @api.model
     def _get_or_create_user(self, conf, login, ldap_entry):
         op_obj = self.env['res.company.ldap.operator']
-        user_id = super()._get_or_create_user(
+        user_id = super().get_or_create_user(
             conf, login, ldap_entry
         )
         if not user_id:
             return user_id
         this = self.browse(conf['id'])
         user = self.env['res.users'].browse(user_id)
-
         groups = []
 
         if this.only_ldap_groups:

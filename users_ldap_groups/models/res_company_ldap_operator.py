@@ -37,8 +37,7 @@ class ResCompanyLdapOperator(models.AbstractModel):
         query_string = Template(mapping.value).safe_substitute({
             attr: ldap_entry[1][attr][0].decode() for attr in ldap_entry[1]
         })
-
-        results = mapping.ldap_id._query(
+        results = mapping.ldap_id.query(
             mapping.ldap_id.read()[0],
             query_string
         )

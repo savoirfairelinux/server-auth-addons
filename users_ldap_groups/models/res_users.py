@@ -19,8 +19,8 @@ class ResUsers(models.Model):
             # this case to apply ldap groups if necessary
             ldaps = user.company_id.ldaps
             if user.active and any(ldaps.mapped('only_ldap_groups')):
-                for conf in ldaps._get_ldap_dicts():
-                    entry = ldaps._authenticate(conf, login, password)
+                for conf in ldaps.get_ldap_dicts():
+                    entry = ldaps.authenticate(conf, login, password)
                     if entry:
                         ldaps._get_or_create_user(conf, login, entry)
                         break
