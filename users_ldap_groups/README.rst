@@ -13,14 +13,8 @@ LDAP groups assignment
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
-.. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fserver--auth-lightgray.png?logo=github
-    :target: https://github.com/OCA/server-auth/tree/12.0/users_ldap_groups
-    :alt: OCA/server-auth
-.. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/server-auth-12-0/server-auth-12-0-users_ldap_groups
-    :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
-    :target: https://runbot.odoo-community.org/runbot/251/12.0
+    :target: https://runbot.odoo-community.org/runbot/251/11.0
     :alt: Try me on Runbot
 
 |badge1| |badge2| |badge3| |badge4| |badge5| 
@@ -77,6 +71,7 @@ Contributors
 * Holger Brunn <hbrunn@therp.nl>
 * Giacomo Spettoli <giacomo.spettoli@gmail.com>
 * Alexey Pelykh <alexey.pelykh@brainbeanapps.com>
+* Luis gGrcia <luis.garcia@savoirfairelinux.com>
 
 Maintainers
 ~~~~~~~~~~~
@@ -90,7 +85,5 @@ This module is maintained by the OCA.
 OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
-
-This module is part of the `OCA/server-auth <https://github.com/OCA/server-auth/tree/12.0/users_ldap_groups>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
