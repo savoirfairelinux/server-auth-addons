@@ -17,7 +17,7 @@ class Users(models.Model):
         saml_uid = validation['user_id']
         if self.check_if_create_user(provider):
             self.create_user(saml_uid, provider)
-        super()._auth_saml_signin(provider, validation, saml_response)
+        return super()._auth_saml_signin(provider, validation, saml_response)
 
     def check_if_create_user(self, provider):
         return self.env['auth.saml.provider'].browse(provider).create_user
