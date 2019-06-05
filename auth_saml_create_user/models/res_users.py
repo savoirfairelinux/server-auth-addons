@@ -9,13 +9,15 @@ from odoo.exceptions import AccessDenied
 _logger = logging.getLogger(__name__)
 
 
-class Users(models.Model):
+class ResUsers(models.Model):
     _inherit = "res.users"
 
     @api.multi
     def _auth_saml_signin(self, provider, validation, saml_response):
         saml_uid = validation['user_id']
-        if self.check_if_create_user(provider):
+        user_ids = self.search(
+            [('saml_uid', '=', saml_uid), ('saml_provider_id', '=', provider)])
+        if self.check_if_create_user(provider) and not user_ids:
             self.create_user(saml_uid, provider)
         return super()._auth_saml_signin(provider, validation, saml_response)
 
@@ -30,6 +32,5 @@ class Users(models.Model):
             'login': saml_uid,
             'saml_provider_id': provider,
             'company_id': self.env['res.company'].sudo().browse(1).id,
-            'saml_uid': saml_uid
         })
         new_user.write({'saml_uid': saml_uid})
