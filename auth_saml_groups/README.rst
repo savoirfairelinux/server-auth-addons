@@ -1,4 +1,4 @@
-Auth SAML Create Users
+Auth SAML Groups
 ======================
 This module allows to map SAML groups to odoo groups.
 It adds this feature to "Auth SAML" module.
