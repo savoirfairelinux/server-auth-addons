@@ -18,13 +18,15 @@ class AuthSamlProviderOperator(models.AbstractModel):
         for k in attrs:
             if isinstance(k, tuple) and k[0] == mapping.saml_attribute:
                 matching_value == attrs[k][0]
-                break
-        return mapping.value in matching_value
+                if mapping.value in matching_value:
+                    return True
+        return False
 
     def equals(self, attrs, mapping):
         matching_value = ''
         for k in attrs:
             if isinstance(k, tuple) and k[0] == mapping.saml_attribute:
                 matching_value = attrs[k][0]
-                break
-        return mapping.value == matching_value
+                if mapping.value == matching_value:
+                    return True
+        return False

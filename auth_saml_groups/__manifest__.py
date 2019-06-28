@@ -11,12 +11,12 @@
     'description': """
         Long description of module's purpose
     """,
-    'author': 'Savoir-faire Linux',
+    'author': 'Savoir-faire Linux, Odoo Community Association (OCA)',
     'maintainer': 'Savoir-faire Linux',
-    'website': 'http://www.savoirfairelinux.com',
+    'website': 'https://github.com/OCA/server-auth',
     'license': 'LGPL-3',
     'category': 'Tools',
-    'version': '11.1',
+    'version': '11.0.1.0.0',
     'depends': [
         'base',
         'auth_saml'
