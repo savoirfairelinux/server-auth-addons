@@ -86,7 +86,7 @@ class ResUser(models.Model):
                 nickname = None
                 try:
                     name = attribute.name
-                except Exception as e:
+                except Exception:
                     _logger.warning('sso_after_response: error decoding name \
                         of attribute %s' % attribute.dump())
                 else:
@@ -140,7 +140,6 @@ class ResUser(models.Model):
         """
         token_osv = self.env['auth_saml.token']
         saml_uid = validation['user_id']
-
         user_ids = self.search(
             [('saml_uid', '=', saml_uid), ('saml_provider_id', '=', provider)])
 

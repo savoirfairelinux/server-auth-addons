@@ -29,7 +29,6 @@ class AuthSamlProvider(models.Model):
 
     @api.multi
     def _get_user_groups(self, user_id, attrs):
-        operator = self.env['auth.saml.provider.operator']
         groups = []
         user = self.env['res.users'].browse(user_id)
 
@@ -38,6 +37,7 @@ class AuthSamlProvider(models.Model):
             groups.append((5, False, False))
 
         for mapping in self.group_mapping_ids:
+            operator = self.env['auth.saml.provider.operator']
             operator = getattr(operator, mapping.operator)
             _logger.debug('checking mapping %s', mapping)
             if operator(attrs, mapping):
