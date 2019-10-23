@@ -1,12 +1,11 @@
-# -*- encoding: utf-8 -*-
 #    Copyright 2018 Sistemas de Datos - Rodrigo Colombo Vlaeminch <rcolombo@sdatos.es>
 #    Copyright 2018 Sistemas de Datos - Lorenzo Martin Alvarez <lmartin@sdatos.es>
 #    License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0
 {
     'name' : 'Time Logout',
-    'version' : '0.1',
+    'version' : '11.0.1.0.0',
     'author' : 'Sistemas de Datos',
-    'maintainer': 'Sistemas de Datos',
+    'maintainer': 'Savoir-faire Linux',
     'category' : 'Tools',
     'summary': 'Time for automatic logout',
     'license': 'AGPL-3',
