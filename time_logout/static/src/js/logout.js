@@ -9,7 +9,7 @@ odoo.define('time_logout.logout', function (require) {
 	var core = require('web.core');
 	var _t = core._t;
 	var session = require('web.session');
-
+	
 	/** localStorage
 	 * Active_ses -> int (ses_id)
 	 * Cont -> int (cont)
@@ -28,7 +28,7 @@ odoo.define('time_logout.logout', function (require) {
     var isRefresh;
     
     var html_message = "<div id='session_end' class='o_notification o_timeout' style='opacity: 1;'>" +
-		    				"<div class='o_notification_title'>" + _t("Votre session est sur le point de se terminer, veuillez déplacer le curseur afin de rester connecté(e)") + "</div>" +
+		    				"<div class='o_notification_title'>" + _t("Your session will expire, move mouse to avoid it") + "</div>" +
 		    				"<div class='o_notification_content'>" +
 		    				    "<div style='text-align:center'>" +
 		    					    "<span class='fa fa-clock-o' style='font-size: 48px;'</span>" + "<span id='cont_message'/>" +

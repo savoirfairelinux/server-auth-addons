@@ -7,8 +7,8 @@ from odoo.http import request
 class ResUsers(models.Model):
     _inherit = 'res.users'
     
-    context_session_timeout = fields.Integer(string = 'Session Timeout', default=1800, help="Inactivity time in seconds to expire session")
-    context_session_alert_time = fields.Integer(string = 'Alert for Timeout', default=1740, help="Time in seconds before timeout to show the expire message (max 15s before)")
+    context_session_timeout = fields.Integer(string = 'Session Timeout', default=0, help="Inactivity time in seconds to expire session")
+    context_session_alert_time = fields.Integer(string = 'Alert for Timeout', default=0, help="Time in seconds before timeout to show the expire message (max 15s before)")
     context_not_in_edition = fields.Boolean(string = 'Not end in edition', default=False, 
                                             help="Set on true if the session don't expire in edition mode, "
                                                  "in the other case if you are editing it will be save "
