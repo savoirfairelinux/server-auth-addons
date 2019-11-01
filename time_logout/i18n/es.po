@@ -67,10 +67,4 @@ msgstr "Tiempo de inactividad en segundos para que expire la sesión"
 msgid "Users"
 msgstr "Usuarios"
 
-#. module: time_logout
-#. openerp-web
-#: code:addons/time_logout/static/src/js/logout.js:26
-#, python-format
-msgid "Your session will expire, move mouse to avoid it"
-msgstr "Su sesión expirará, mueva el ratón para evitarlo"
 
