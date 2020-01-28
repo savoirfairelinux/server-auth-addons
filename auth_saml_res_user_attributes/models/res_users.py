@@ -92,16 +92,16 @@ class ResUsers(models.Model):
                     matching_attribute, attrs))
 
         validation = {'user_id': matching_value, 'name': matching_name}
-        return validation
+        return (validation, attrs)
 
     @api.multi
-    def _auth_saml_signin(self, provider, validation, saml_response):
+    def _auth_saml_signin(self, provider, validation, saml_response, attr):
         saml_uid = validation['user_id']
         user_ids = self.search(
             [('saml_uid', '=', saml_uid), ('saml_provider_id', '=', provider)])
         if self.check_if_create_user(provider) and not user_ids:
             self.create_user(validation, provider)
-        return super()._auth_saml_signin(provider, validation, saml_response)
+        return super()._auth_saml_signin(provider, validation, saml_response, attr)
 
     def create_user(self, validation, provider):
         saml_uid = validation['user_id']
